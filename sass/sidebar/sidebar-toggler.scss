@@ -1,0 +1,117 @@
+.sidebar-toggler__checkbox{
+    position: absolute;
+    z-index: -10;
+    
+    
+    &:checked{
+        
+        
+        
+        
+        + .sidebar{
+            width: 3.5rem;
+            
+            .sidebar-toggler{
+                width: 100%;
+                height: 3rem;
+            }
+            
+            .sidebar-toggler__icon{
+                &::before { transform: rotate(30deg); }
+                &::after { transform: rotate(-30deg); }
+            }
+            
+            .sidebar-logo__wrapper{
+                height: 0;
+                overflow: hidden;
+            }
+            
+            .sidebar-user { padding: 0 .25rem; }
+            
+            .sidebar-user__avatar-wrapper{
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            .sidebar-user__name, .sidebar-user__status{ font-size: $font-size-xxs; }
+            
+            .sidebar-nav__item{
+                z-index: 2;
+                width: 3.5rem;
+                overflow: hidden;
+                
+                &:hover, &:focus{
+                    background: $grey-50;
+                    width: 10rem;
+                    box-shadow: $shadow-10;
+                }
+            }
+            
+            .sidebar-nav__notification{
+                right: .25rem;
+                top: .25rem;
+                padding: .1rem .25rem;
+                font-size: .5rem;
+            }
+            
+            .sidebar-nav__header{
+                
+                &:before{
+                    content: attr(data-toggle-shortcut);
+                    text-transform: uppercase;
+                    margin-right: 2rem;
+                    
+                }
+            }
+        }
+        
+        ~ .app__page{
+            width: calc(100% - 3.5rem);
+        }
+    }
+}
+
+
+
+.sidebar-toggler{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    
+    &:hover .sidebar-toggler__icon{
+        
+        &::before, &::after { background: $primary; }
+    }
+    
+    .sidebar-toggler__icon{
+        width: .75rem;
+        height: .5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            width: .75rem;
+            height: .15rem;
+            background: $grey-300;
+            transition: transform .4s background $transition-duration;
+        }
+        
+        &:before{
+            top: 0;
+            transform: rotate(-30deg);
+        }
+        
+        &::after{
+            bottom: 0;
+            transform: rotate(30deg);
+        }
+    }
+}

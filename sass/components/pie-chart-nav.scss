@@ -1,0 +1,130 @@
+$chart-circumference: 503;
+
+.pie-chart-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    transform: translateY(-25%);
+    
+    .pie-chart-nav__name{
+        width: calc(100% / 3);
+        cursor: pointer;
+        //transition: $transition-duration;
+        font-size: $font-size-sm;
+        color: $dark-secondary;
+        line-height: 1.1;
+        padding: .6rem;
+        margin: -.5rem;
+        
+        &:hover, &:focus{
+            color: $primary;
+        }
+           
+    }
+}
+
+//input europe kiedy jest zaznaczony edytuje wykres nth 1 i nth 2 i edytujemy w nim element svg circle wartości wpisujemy według //uznania do każdego wykresu.
+.pie-chart-nav__radio{
+    position: absolute;
+    z-index: -10;
+    
+    &:checked{
+        
+        //EUROPE
+        &.pie-chart-nav__radio--europe ~ .dashboard__pie-charts--wrapper .pie-chart{
+            
+            &:nth-of-type(1){
+                .pie-chart__inner-circle{ stroke-dasharray: .73 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '73%'; }
+            }
+            
+            &:nth-of-type(2){
+                .pie-chart__inner-circle{ stroke-dasharray: .81 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '81%'; }
+            }
+               
+        }
+        
+        //ASIA
+        &.pie-chart-nav__radio--asia ~ .dashboard__pie-charts--wrapper .pie-chart{
+            
+            &:nth-of-type(1){
+                .pie-chart__inner-circle{ stroke-dasharray: .89 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '89%'; }
+            }
+            
+            &:nth-of-type(2){
+                .pie-chart__inner-circle{ stroke-dasharray: .95 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '95%'; }
+            }
+               
+        }
+        
+        //NORTH AMERICA
+        &.pie-chart-nav__radio--north-america ~ .dashboard__pie-charts--wrapper .pie-chart{
+            
+            &:nth-of-type(1){
+                .pie-chart__inner-circle{ stroke-dasharray: .54 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '54%'; }
+            }
+            
+            &:nth-of-type(2){
+                .pie-chart__inner-circle{ stroke-dasharray: .76 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '76%'; }
+            }
+               
+        }
+        
+        //SOUTH AMERICA
+        &.pie-chart-nav__radio--south-america ~ .dashboard__pie-charts--wrapper .pie-chart{
+            
+            &:nth-of-type(1){
+                .pie-chart__inner-circle{ stroke-dasharray: .69 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '69%'; }
+            }
+            
+            &:nth-of-type(2){
+                .pie-chart__inner-circle{ stroke-dasharray: .92 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '92%'; }
+            }
+               
+        }
+        
+        //OCEANIA
+        &.pie-chart-nav__radio--oceania ~ .dashboard__pie-charts--wrapper .pie-chart{
+            
+            &:nth-of-type(1){
+                .pie-chart__inner-circle{ stroke-dasharray: .34 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '34%'; }
+            }
+            
+            &:nth-of-type(2){
+                .pie-chart__inner-circle{ stroke-dasharray: .44 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '44%'; }
+            }
+               
+        }
+        
+        //AFRICA
+        &.pie-chart-nav__radio--africa ~ .dashboard__pie-charts--wrapper .pie-chart{
+            
+            &:nth-of-type(1){
+                .pie-chart__inner-circle{ stroke-dasharray: .21 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '21%'; }
+            }
+            
+            &:nth-of-type(2){
+                .pie-chart__inner-circle{ stroke-dasharray: .33 * $chart-circumference, $chart-circumference; }
+                .pie-chart__info::after { content: '33%'; }
+            }
+               
+        }
+    }
+}
+
+
+
+
+

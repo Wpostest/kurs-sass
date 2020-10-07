@@ -1,0 +1,106 @@
+//głowny/podstawowy kolor
+$primary: #9c27b0;
+$secondary: #ffa726;
+
+//kolor zielony
+$success: #8BC34A;
+
+//kolory czcionek dark
+$dark: rgba(#000, .87);
+$dark-secondary: rgba(#000, .54);
+$dark-disabled: rgba(#000, .38);
+
+//kolory 
+$grey-50: #fafafa;
+$light: #fff;
+$grey-100: #f5f5f5;
+$grey-300: #e0e0e0;
+
+//Zmienne kolorów dla flag
+$flag-white: $light;
+$flag-red: #ce1126;
+$flag-green: #009639;
+$flag-blue: #005eb8;
+$flag-yellow: #fed141;
+
+//gradien glowny/podstawowy
+$gradient-primary: linear-gradient(45deg, $primary 0, lighten($primary, 17%) 50%, $primary 100%);
+$gradient-secondary: linear-gradient(45deg, $secondary  0, lighten($secondary, 15%) 75%, $secondary 100%);
+
+//cienie
+$shadow-10: 0 .25rem 1rem rgba(0,0,0, 0.15);
+$shadow-20: 0 .75rem 1.25rem rgba(0,0,0, 0.2);
+$shadow-primary: 0 .75rem 1.25rem rgba($primary, 0.2);
+$shadow-secondary: 0 .75rem 1.25rem rgba($secondary, 0.2);
+
+//rozmiar fontow
+$font-size-xxs: 0.625rem;
+$font-size-xs: .75rem;
+$font-size-sm: .9rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
+
+//szerokosc fontow
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+//Domyslna szybkosc animacji
+$transition-duration: .2s; 
+
+html{
+    //overflow: hidden;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+button{
+    padding: 0px;
+    font-size: $font-size-sm;
+    color: $dark-secondary;
+    line-height: 1.1;
+    transition: color $transition-duration;
+    cursor: pointer;
+    border: none;
+    background: none;
+    
+    &:hover, &:focus { color: $primary; }
+    
+}
+
+
+span, p{
+    color: $dark-secondary;
+    font-size: $font-size-sm;
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: $font-size-xl;
+    color: $dark-secondary;
+}
+
+h3 {
+    font-size: $font-size-md;
+    color: $dark-disabled;
+    text-transform: uppercase;
+}
+
+.app{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    transition: transform $transition-duration;
+}
+
+.app__page{
+    width: calc(100% - 12rem);
+    background: $grey-50;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, .2);
+    position: relative;
+    z-index: 1;
+    transition: width $transition-duration;
+}

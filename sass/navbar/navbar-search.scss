@@ -1,0 +1,88 @@
+.navbar-search__input{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    left: 50%;
+    top: 1.5rem;
+    padding: 0 2rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: $font-size-xl;
+    color: $primary;
+    border: .1rem solid $primary;
+    border-radius: 2rem;
+    transform: translate(-50%, -50%);
+    transition-property: width, top, opacity;
+    transition-duration: $transition-duration;
+    
+    &:focus{
+        width: calc(100% - 26rem);
+        top: 5rem;
+        outline: none;
+        opacity: 1;
+        
+        & + .app{
+            transform: perspective(70rem) rotateX(30deg);
+        }
+    }
+}
+
+
+
+
+.navbar-search{
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    
+    .navbar-search__label-icon{
+        display: block;
+        overflow: hidden;
+        height: inherit;    
+        height: inherit;
+        cursor: pointer;
+        padding: 1.5rem;
+        margin: -.5rem;
+        
+        &:hover{
+            .navbar-search__icon{
+                color: $primary;
+                text-shadow: $shadow-20;
+                font-size: calc(#{$font-size-xxl} + 50%);
+            }
+            
+            .navbar-search__slogan{
+                color: $primary;
+                text-shadow: $shadow-20;
+                left: 2.5rem;
+                opacity: 1;
+            }
+        }
+        
+        
+    }
+    
+    .navbar-search__icon{
+        color: $dark_secondary;
+        font-size: $font-size-xxl;
+        line-height: 1.25;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition-property: color, text-shadow, font-size;
+        transition-duration: $transition-duration;
+    }
+    
+    .navbar-search__slogan{
+        color: $dark_secondary;
+        opacity: 0;
+        line-height: 1.25;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition-property: color, text-shadow, left, opacity;
+        transition-duration: $transition-duration;
+    }
+}

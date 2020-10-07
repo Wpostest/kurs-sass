@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Leckerli+One|Roboto:400,700|Material+Icons" rel="stylesheet">
+    
+    <title>Nazwa Strony</title>
+    
+    
+</head>
+<body>
+   
+    <input type="text" placeholder="wyszukaj" class="navbar-search__input" id="search-input">   
+       
+    <div class="app">
+       
+    <input class="sidebar-toggler__checkbox" type="checkbox" id="sidebar-toggler">
+        
+        <div class="sidebar">
+          
+          <label for="sidebar-toggler" class="sidebar-toggler">
+              <i class="sidebar-toggler__icon"></i>          
+          </label>
+           
+           <!-- Logo -->
+           <div class="sidebar__section">
+              
+               <div class="sidebar-logo">
+                   <a href="#" class="sidebar-logo__wrapper">
+                   <h1 class="sidebar-logo__text" data-text="MyApp">MyApp</h1>
+                   </a>
+               </div>
+               
+           </div>
+           
+           <!-- Użytkownik -->
+           <div class="sidebar__section">
+                <div class="sidebar-user">
+               <!-- Awatar -->
+                  <div class="sidebar-user__avatar-wrapper">
+                   <img class="sidebar-user__avatar" src="https://randomuser.me/api/portraits/women/26.jpg" alt="User">
+                   <a class="sidebar-user__overlay" href="#">
+                       <i class="material-icons sidebar-user__icon">add_a_photo</i>
+                   </a>
+                   </div>
+                   
+                <!-- Nazwa oraz status urzytkownika -->
+                  
+                  <div class="sidebar-user__name-wrapper">
+                      <a href="#" class="sidebar-user__name">Rita Cook</a>
+                      <i class="sidebar-user__status sidebar-user__status--online">Online</i>
+                  </div>
+                  
+                </div>
+                    
+           </div>
+           
+           <!-- Nawigacja #1 -->
+           <div class="sidebar__section">
+               
+               <div class="sidebar-nav">
+                   <h4 class="sidebar-nav__header" data-toggle-shortcut="NAV">Navigation</h4>
+                   <ul>
+                       
+                        <li>
+                            <a href="#" class="sidebar-nav__item  sidebar-nav__item-primary">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">home</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Home</span>
+                            </a>
+                        </li>
+                            
+                        <li>
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item-primary">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">face</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Users</span>
+                            </a>
+                        </li>   
+                            
+                        <li>
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item-primary">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">favorite</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Favorite</span>
+                            </a>
+                        </li>  
+                            
+                        <li>
+                            <a href="#" class="sidebar-nav__item sidebar-nav__item-primary">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">widgets</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Widgets</span>
+                                    <span class="sidebar-nav__notification">New</span>
+                            </a>
+                        </li>            
+
+                            
+                   </ul>
+               </div>
+               
+           </div>
+           
+           <!-- Nawigacja #2 -->
+           <div class="sidebar__section">
+               
+                <div class="sidebar-nav">
+                   <h4 class="sidebar-nav__header"  data-toggle-shortcut="COM">Community</h4>
+                   <ul>
+                      
+                        <li>
+                            <a href="#" class="sidebar-nav__item  sidebar-nav__item-secondary sidebar-nav__item--alert">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">notifications_active</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Notifications</span>
+                                    <span class="sidebar-nav__notification">7</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" class="sidebar-nav__item  sidebar-nav__item-secondary">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">mail</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Mail</span>
+                            </a>
+                        </li>
+                       
+                        <li>
+                            <a href="#" class="sidebar-nav__item  sidebar-nav__item-secondary">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">thumb_up</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Social</span>
+                                    <span class="sidebar-nav__notification">3</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" class="sidebar-nav__item  sidebar-nav__item-secondary">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">date_range</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Calendar</span>
+                            </a>
+                        </li>
+                            
+                   </ul>
+               </div>
+               
+           </div>
+           
+           <!-- Nawigacja #3 -->
+           <div class="sidebar__section">
+               
+               <div class="sidebar-nav">
+                   <h4 class="sidebar-nav__header"  data-toggle-shortcut="SET">Settings</h4>
+                   <ul>
+                       
+                        <li>
+                            <a href="#" class="sidebar-nav__item">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">person_pin</i>
+                                </div>
+                                    <span class="sidebar-nav__title">Profile</span>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" class="sidebar-nav__item">
+                               <div class="sidebar-nav__icon-wrapper">
+                                    <i class="material-icons sidebar-nav__icon">settings</i>
+                                </div>
+                                    <span class="sidebar-nav__title">General</span>
+                            </a>
+                        </li>
+                        
+                   </ul>
+               </div> 
+           
+        </div>
+        
+        </div>
+        
+        <div class="app__page">
+            
+            <div class="navbar">
+                
+                <!-- Wyszukiwarka -->
+                
+                <div class="navbar-search">
+                    
+                    <label for="search-input" class="navbar-search__label-icon">
+                        <i class="material-icons navbar-search__icon">search</i>
+                        <span class="navbar-search__slogan">Search</span>
+                        
+                    </label>
+                    
+                </div>
+                
+                <div class="navbar__wrapper">
+                   
+                    <div class="navbar__section">
+
+                        <!-- Zmieniarka Języków -->
+                        <div class="navbar-lang-switcher">
+                            <a href="#" class="navbar-lang-switcher__lang--wrapper navbar-lang-switcher__lang--wrapper--active">
+                                <i class="navbar-lang-switcher__flag  navbar-lang-switcher__flag--poland"></i>
+                                <span class="lang-switcher__country-name">Polski</span>
+                            </a>
+                            <ul class="navbar-lang-switcher__flag-list">
+                               
+                               <!-- JEZYK ITALIANO -->
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__lang--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--italy"></i>
+                                        <span class="lang-switcher__country-name">Italiano</span>
+                                    </a>
+                                </li>
+                                
+                                <!-- JEZYK GRECKI -->
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__lang--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--greacce"></i>
+                                        <span class="lang-switcher__country-name">Greacce</span>
+                                    </a>
+                                </li>
+                                
+                                <!-- JEZYK  Czech Republic-->
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__lang--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--czech-republic"></i>
+                                        <span class="lang-switcher__country-name">Czech Republic</span>
+                                    </a>
+                                </li>
+                                
+                                <!-- JEZYK Seychelles-->
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__lang--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--seychelles"></i>
+                                        <span class="lang-switcher__country-name">Seychelles</span>
+                                    </a>
+                                </li>
+                                
+                                <!-- JEZYK  Grenadines-->
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__lang--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--grenadies"></i>
+                                        <span class="lang-switcher__country-name">Grenadines</span>
+                                    </a>
+                                </li>
+                                
+                                <!-- JEZYK  Maledives-->
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__lang--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--maldives"></i>
+                                        <span class="lang-switcher__country-name">Maldives</span>
+                                    </a>
+                                </li>
+                                
+                                <!-- JEZYK  United States-->
+                                <li>
+                                    <a href="#" class="navbar-lang-switcher__lang--wrapper">
+                                        <i class="navbar-lang-switcher__flag navbar-lang-switcher__flag--united-states"></i>
+                                        <span class="lang-switcher__country-name">United States</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <div class="navbar__section">
+
+                        <!-- Nazwa oraz status użytkownika -->
+
+                        <div class="sidebar-user sidebar-user--slim">
+               <!-- Awatar -->
+                  <div class="sidebar-user__avatar-wrapper">
+                   <img class="sidebar-user__avatar" src="https://randomuser.me/api/portraits/women/26.jpg" alt="User">
+                   <a class="sidebar-user__overlay" href="#">
+                       <i class="material-icons sidebar-user__icon">add_a_photo</i>
+                   </a>
+                   </div>
+                   
+                <!-- Nazwa oraz status urzytkownika -->
+                  
+                  <div class="sidebar-user__name-wrapper">
+                      <a href="#" class="sidebar-user__name">Rita Cook</a>
+                      <i class="sidebar-user__status sidebar-user__status--online">Online</i>
+                  </div>
+                  
+                </div>
+
+
+                    </div>
+                    <div class="navbar__section">
+
+                        <!-- Przycisk wylogowywania -->
+
+                        <div class="navbar-sign-out">
+                            <a href="#" class="navbar-sign-out__button">
+                            
+                                <i class="material-icons navbar-sign-out__icon">power_settings_new</i>
+                                <i class="material-icons navbar-sign-out__icon">sentiment_very_satisfied</i>
+                                
+                                <div class="navbar-sign-out__letters-wrapper">
+                                    <span class="navbar-sign-out__letter">S</span>
+                                    <span class="navbar-sign-out__letter">i</span>
+                                    <span class="navbar-sign-out__letter">g</span>
+                                    <span class="navbar-sign-out__letter">n</span>
+                                    
+                                    &nbsp;
+                                    
+                                    <span class="navbar-sign-out__letter">o</span>
+                                    <span class="navbar-sign-out__letter">u</span>
+                                    <span class="navbar-sign-out__letter">t</span>
+                  
+                                </div>
+                                
+                                <div class="navbar-sign-out__letters-wrapper navbar-sign-out__letters-wrapper--hidden">
+                                    <span class="navbar-sign-out__letter">S</span>
+                                    <span class="navbar-sign-out__letter">e</span>
+                                    <span class="navbar-sign-out__letter">e</span>
+                                    
+                                    &nbsp;
+                                    
+                                    <span class="navbar-sign-out__letter">y</span>
+                                    <span class="navbar-sign-out__letter">o</span>
+                                    <span class="navbar-sign-out__letter">u</span>
+                                    <span class="navbar-sign-out__letter">!</span>
+                  
+                                </div>
+                            
+                            </a>
+                        </div>
+                        
+                </div>
+                      
+                </div>
+                
+            </div>
+            
+            <div class="dashboard">
+               
+               <div class="container-fluid">
+                   
+                   <div class="row">
+                   
+                          <div class="col-12">
+                              
+                                <div class="dashboard__section dashboard__section--transparent dashboard__section-small">
+                                    <div class="dashboard__heading dashboard__heading-main">
+                                        <h2>Dashboard</h2>
+                                    </div>
+                                </div><!-- END DASHBOARD SECTION -->
+                              
+                          </div><!-- END COL-12 -->    
+                           
+                   </div><!-- END ROW -->
+                   
+                   <div class="row">
+                      
+                       <div class="col-12">
+                           
+                           <div class="dashboard__section">
+                               <div class="dashboard__heading">
+                                   <h3>New Clients</h3>
+                               </div>
+
+                               <table class="table">
+                                   <thead class="table__thead">
+                                       <tr class="table__tr">
+                                           <th class="table__th table__th--not-sortable">Actions</th>
+                                           <th class="table__th">ID</th>
+                                           <th class="table__th">First Name</th>
+                                           <th class="table__th">Last Name</th>
+                                           <th class="table__th">Email Name</th>
+                                           <th class="table__th table__th--sort-asc">Created</th>
+                                           <th class="table__th">Onboarding</th>
+                                           <th class="table__th table__th--not-sortable"><i class="material-icons">playlist_add</i></th>
+                                       </tr>
+                                   </thead>
+                                   
+                                   <tbody class="table__tbody">
+                                      
+                                        <!-- TR 1 -->
+                                       <tr class="table__tr">
+                                           <td class="table__td">
+                                               <button class="material-icons table__action-icon">edit</button>
+                                               <button class="material-icons table__action-icon">delete</button>
+                                           </td>
+                                           
+                                           <td class="table__td">12118</td>
+                                           <td class="table__td">Aaron</td>
+                                           <td class="table__td">Sullivan</td>
+                                           <td class="table__td">a.sullivan@ex.com</td>
+                                           <td class="table__td">04.12.2018</td>
+                                           <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
+                                           <td class="table__td">
+                                                <input class="table__toggler" id="more-actions" type="checkbox">
+                                                <label class="table__dots" for="more-actions"></label>
+                                                <ul class="table__more-actions">
+                                                    <li class="table__action table__action--edit">Edit</li>
+                                                    <li class="table__action table__action--remove">Remove</li>
+                                                    <li class="table__action table__action--email">Send Email</li>
+                                                    <li class="table__action table__action--message">Send Message</li>
+                                                    <li class="table__action table__action--note">Add Note</li>
+                                                    <li class="table__action table__action--json">Copy to JSON</li>
+                                                </ul> 
+                                           </td>
+                                       </tr>
+                                       
+                                       <!-- TR 2 -->
+                                        <tr class="table__tr">
+                                           <td class="table__td">
+                                               <button class="material-icons table__action-icon">edit</button>
+                                               <button class="material-icons table__action-icon">delete</button>
+                                           </td>
+                                           
+                                           <td class="table__td">12048</td>
+                                           <td class="table__td">Arianna</td>
+                                           <td class="table__td">Stewart</td>
+                                           <td class="table__td">a.stewart@ex.com</td>
+                                           <td class="table__td">08.12.2018</td>
+                                           <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
+                                           <td class="table__td">
+                                               <label class="table__dots"></label>
+                                           </td>
+                                       </tr>
+                                       
+                                       <!-- TR 3 -->
+                                        <tr class="table__tr">
+                                           <td class="table__td">
+                                               <button class="material-icons table__action-icon">edit</button>
+                                               <button class="material-icons table__action-icon">delete</button>
+                                           </td>
+                                           
+                                           <td class="table__td">22312</td>
+                                           <td class="table__td">Marlene</td>
+                                           <td class="table__td">Johnson</td>
+                                           <td class="table__td">m.johnson@ex.com</td>
+                                           <td class="table__td">12.07.2018</td>
+                                           <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
+                                           <td class="table__td">
+                                               <label class="table__dots"></label>
+                                           </td>
+                                       </tr>
+                                       
+                                       <!-- TR 4 -->
+                                        <tr class="table__tr">
+                                           <td class="table__td">
+                                               <button class="material-icons table__action-icon">edit</button>
+                                               <button class="material-icons table__action-icon">delete</button>
+                                           </td>
+                                           
+                                           <td class="table__td">12338</td>
+                                           <td class="table__td">Filip</td>
+                                           <td class="table__td">Kwiatkowski</td>
+                                           <td class="table__td">filip.kwiatkowski2@wp.pl</td>
+                                           <td class="table__td">10.12.2018</td>
+                                           <td class="table__td"><span class="table__onboarding table__onboarding--pending">Pending</span></td>
+                                           <td class="table__td">
+                                               <label class="table__dots"></label>
+                                           </td>
+                                       </tr>
+                                       
+                                       <!-- TR 5 -->
+                                        <tr class="table__tr">
+                                           <td class="table__td">
+                                               <button class="material-icons table__action-icon">edit</button>
+                                               <button class="material-icons table__action-icon">delete</button>
+                                           </td>
+                                           
+                                           <td class="table__td">12416</td>
+                                           <td class="table__td">Katarzyna</td>
+                                           <td class="table__td">Kwiatkowska</td>
+                                           <td class="table__td">novena31@wp.pl</td>
+                                           <td class="table__td">10.12.2018</td>
+                                           <td class="table__td"><span class="table__onboarding table__onboarding--completed">Completed</span></td>
+                                           <td class="table__td">
+                                               <label class="table__dots"></label>
+                                           </td>
+                                       </tr>
+                                       
+                                       <!-- TR 6 -->
+                                        <tr class="table__tr">
+                                           <td class="table__td">
+                                               <button class="material-icons table__action-icon">edit</button>
+                                               <button class="material-icons table__action-icon">delete</button>
+                                           </td>
+                                           
+                                           <td class="table__td">12321</td>
+                                           <td class="table__td">Tomasz</td>
+                                           <td class="table__td">Kwiatkowski</td>
+                                           <td class="table__td">tomeczek1@wp.pl</td>
+                                           <td class="table__td">10.12.2018</td>
+                                           <td class="table__td"><span class="table__onboarding table__onboarding--completed">Completed</span></td>
+                                           <td class="table__td">
+                                               <label class="table__dots"></label>
+                                           </td>
+                                       </tr>
+                                       
+                                       
+                                   </tbody>
+
+                               </table>
+                               
+
+
+                           </div><!-- END DASHBOARD SECTION -->
+                           
+                       </div><!-- END COL-12-->
+                       
+                   </div><!-- END ROW -->
+                   
+                   <div class="row">
+                       
+                       <div class="col-12 col-xl-6">
+                           
+                           <div class="dashboard__section">
+                                
+                                <div class="dashboard__charts-wrapper">
+                                   
+                                    <div class="dashboard__chart-wrapper">
+                                       
+                                        <div class="dashboard__heading">
+                                            <h3>Total Revenue</h3>
+                                        </div>
+                                        
+                                        <div class="dashboard__chart-nav">
+                                            <button class="button dashboard__chart-link dashboard__chart-link--main">Yearly</button>
+                                            <button class="dashboard__chart-link">Jun</button>
+                                            <button class="dashboard__chart-link">Jul</button>
+                                            <button class="dashboard__chart-link">Aug</button>
+                                        </div><!-- END DASHBOARD CHART NAV-->
+                                        
+                                        <div class="progress-chart" data-percentage="79" data-slogan="of target">
+                                           
+                                            <i class="progress-chart__inner-background"></i>
+                                            <i class="progress-chart__mask"></i>
+                                            <i class="progress-chart__progress progress-chart__progress--first-part"></i>
+                                            <i class="progress-chart__progress progress-chart__progress--second-part"></i>
+                                            <i class="progress-chart__progress progress-chart__progress--third-part"></i>
+                                            
+                                        </div>
+                                        
+                                    </div><!-- END CHART WRAPPER 1 -->
+                                    
+                                    <div class="dashboard__chart-wrapper">
+                                       
+                                        <div class="dashboard__heading">
+                                            <h3>Total Costs</h3>
+                                        </div>
+                                        
+                                        <div class="dashboard__chart-nav">
+                                            
+                                            <label class="button button--secondary dashboard__calendar-toggler" for="budget-calendar">
+                                                <i class="material-icons dashboard__calendar-toggler-icon">date_range</i>
+                                            </label>
+                                            <input id="budget-calendar" type="checkbox" class="dashboard__calendar-checkbox">
+                                            
+                                            <div class="calendar">
+                                                <div class="calendar__month-nav">
+                                                    <button class="calendar__switcher calendar__switcher--left"></button>
+                                                    
+                                                    <span class="calendar__month-name">December</span>
+                                                    
+                                                    <button class="calendar__switcher calendar__switcher--right"></button> 
+                                                </div>
+                                                
+                                                <div class="calendar__labels-wrapper">
+                                                    <span class="calendar__label">Sun</span>
+                                                    <span class="calendar__label">Mon</span>
+                                                    <span class="calendar__label">Tue</span>
+                                                    <span class="calendar__label">Wed</span>
+                                                    <span class="calendar__label">Thu</span>
+                                                    <span class="calendar__label">Fir</span>
+                                                    <span class="calendar__label">Sat</span>
+                                                </div>
+                                                
+                                                <div class="calendar__days-wrapper">
+                                                    <i class="calendar__day calendar__day--inactive">29</i>
+                                                    <i class="calendar__day calendar__day--inactive">30</i>
+                                                    <i class="calendar__day calendar__day--inactive">31</i>
+                                                    <i class="calendar__day">1</i>
+                                                    <i class="calendar__day calendar__day--checked">2</i>
+                                                    <i class="calendar__day calendar__day--checked">3</i>
+                                                    <i class="calendar__day calendar__day--checked">4</i>
+                                                    <i class="calendar__day calendar__day--checked">5</i>
+                                                    <i class="calendar__day calendar__day--checked">6</i>
+                                                    <i class="calendar__day calendar__day--checked">7</i>
+                                                    <i class="calendar__day calendar__day--checked">8</i>
+                                                    <i class="calendar__day calendar__day--checked">9</i>
+                                                    <i class="calendar__day calendar__day--checked">10</i>
+                                                    <i class="calendar__day calendar__day--checked">11</i>
+                                                    <i class="calendar__day calendar__day--checked">12</i>
+                                                    <i class="calendar__day calendar__day--checked">13</i>
+                                                    <i class="calendar__day calendar__day--checked">14</i>
+                                                    <i class="calendar__day calendar__day--checked">15</i>
+                                                    <i class="calendar__day">16</i>
+                                                    <i class="calendar__day">17</i>
+                                                    <i class="calendar__day calendar__day--today">18</i>
+                                                    <i class="calendar__day">19</i>
+                                                    <i class="calendar__day">20</i>
+                                                    <i class="calendar__day">21</i>
+                                                    <i class="calendar__day">22</i>
+                                                    <i class="calendar__day">23</i>
+                                                    <i class="calendar__day">24</i>
+                                                    <i class="calendar__day">25</i>
+                                                    <i class="calendar__day">26</i>
+                                                    <i class="calendar__day">27</i>
+                                                    <i class="calendar__day">28</i>
+                                                    <i class="calendar__day">29</i>
+                                                    <i class="calendar__day">30</i>
+                                                    <i class="calendar__day">31</i>
+                                                    <i class="calendar__day calendar__day--inactive">1</i>
+                                                </div>
+                                            </div>
+                                            
+                                            <span class="dashboard__date-range">2.12.2018 - 15.12.2018</span>
+                                            
+                                        </div><!-- END DASHBOARD CHART NAV-->
+                                        
+                                        <div class="progress-chart progress-chart--show-value" 
+                                          data-percentage="25" data-slogan="of target budget" data-value="11M">
+                                           
+                                            <i class="progress-chart__inner-background"></i>
+                                            <i class="progress-chart__mask"></i>
+                                            <i class="progress-chart__progress progress-chart__progress--first-part"></i>
+                                            <i class="progress-chart__progress progress-chart__progress--second-part"></i>
+                                            <i class="progress-chart__progress progress-chart__progress--third-part"></i>
+                                            
+                                        </div>
+                                        
+                                    </div><!-- END CHART WRAPPER 1 -->
+                                    
+                                </div><!-- END DASHBOARD CHARTS WRAPPER -->
+                                
+                                <p class="dashboard--more-charts"><a class="dashboard--more-charts-link" href="#">Click here</a> to see more statistic.</p>
+                               
+                           </div><!--  END DASHBOARD SECTION-->
+                           
+                       </div><!--  END COL-12 -->
+                       
+                       <div class="col-12 col-xl-6">
+                           
+                           <div class="dashboard__section">
+                               
+                                <div class="dashboard__heading">
+                                   
+                                    <h3>Sales Efficiency</h3>
+                                    
+                                </div>
+                                
+                                <div class="pie-chart-nav">
+                                    <label for="chart-europe" class="pie-chart-nav__name pie-chart-nav__name--europe">Europe</label>
+                                    <label for="chart-asia" class="pie-chart-nav__name pie-chart-nav__name--asia">Asia</label>
+                                    <label for="chart-north-america" class="pie-chart-nav__name pie-chart-nav__name--north-america">North America</label>
+                                    <label for="chart-south-america" class="pie-chart-nav__name pie-chart-nav__name--south-america">South America</label>
+                                    <label for="chart-oceania" class="pie-chart-nav__name pie-chart-nav__name--oceania">Oceania</label>
+                                    <label for="chart-africa" class="pie-chart-nav__name pie-chart-nav__name--africa">Africa</label>
+                                </div>
+                                
+                                <input type="radio" checked="checked" name="chart-territory" id="chart-europe" class="pie-chart-nav__radio pie-chart-nav__radio--europe">
+                                <input type="radio" name="chart-territory" id="chart-asia" class="pie-chart-nav__radio pie-chart-nav__radio--asia">
+                                <input type="radio" name="chart-territory" id="chart-north-america" class="pie-chart-nav__radio pie-chart-nav__radio--north-america">
+                                <input type="radio" name="chart-territory" id="chart-south-america" class="pie-chart-nav__radio pie-chart-nav__radio--south-america">
+                                <input type="radio" name="chart-territory" id="chart-oceania" class="pie-chart-nav__radio pie-chart-nav__radio--oceania">
+                                <input type="radio" name="chart-territory" id="chart-africa" class="pie-chart-nav__radio pie-chart-nav__radio--africa">
+                                
+                                <div class="dashboard__pie-charts--wrapper">
+                                    
+                                    <div class="pie-chart">
+                                        <div class="pie-chart__wrapper">
+                                            <svg class="pie-chart__background">
+                                                <circle r="80" cx="80" cy="80" class="pie-chart__inner-circle"></circle>
+                                            </svg>
+                                            
+                                            <div class="pie-chart__info"></div>
+                                        </div>
+                                        
+                                        <h4 class="pie-chart__title">CRM solutions</h4>
+                                        
+                                    </div>
+                                    
+                                    <div class="pie-chart pie-chart--secondary">
+                                        <div class="pie-chart__wrapper">
+                                            <svg class="pie-chart__background">
+                                                <circle r="80" cx="80" cy="80" class="pie-chart__inner-circle"></circle>
+                                            </svg>
+                                            
+                                            <div class="pie-chart__info"></div> 
+                                        </div>
+                                        
+                                        <h4 class="pie-chart__title">Mobile Apps</h4>
+                                        
+                                    </div>
+                                    
+                                </div>
+                               
+                           </div><!--  END DASHBOARD SECTION-->
+                           
+                       </div><!--  END COL-12 -->
+                     
+                   </div><!-- END ROW  -->
+                   
+               </div><!-- END CONTAINER FLUID -->
+                  
+            </div><!-- END DASHBOARD -->
+            
+        </div>
+        
+    </div>
+    
+</body>
+</html>

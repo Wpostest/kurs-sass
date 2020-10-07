@@ -1,0 +1,158 @@
+$chart-size: 10rem; //Wielkość wykresu
+$chart-border-size: .75rem; // Grubosc pierscienia
+$percentage: 3.6deg;
+
+.progress-chart{
+    width: $chart-size;
+    height: $chart-size;
+    background: $grey-100;
+    border-radius: 50%;
+    box-shadow: $shadow-primary;
+    position: relative;
+    margin: 1.25rem auto 0;
+    
+    &::before{
+        content: attr(data-percentage)'%';
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        top: calc(50% - .75rem);
+        transform: translate(-50%, -50%);
+        font-size: $font-size-xxl;
+        color: $primary;
+        white-space: nowrap;
+        
+        
+    }
+    
+    &::after{
+        content: attr(data-slogan);
+        position: absolute;
+        z-index: 5;
+        width: calc(100% - 2rem);
+        top: calc(50% + .5rem);
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: $font-size-sm;
+        color: $dark-disabled;
+        text-align: center;
+        line-height: 1.25;
+    }
+    
+    
+    
+    .progress-chart__inner-background{
+        position: absolute;
+        z-index: 4;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: $light;
+        width: $chart-size - $chart-border-size;
+        height: $chart-size - $chart-border-size;    
+        
+    }
+    
+    .progress-chart__mask{
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        border: $chart-size / 2 solid;
+        border-color: transparent $grey-100 transparent transparent;
+        z-index: 2;
+        transform: rotate(-135deg);
+    }
+    
+    .progress-chart__progress{
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        border: $chart-size / 2 solid;
+        
+        
+        &.progress-chart__progress--first-part{
+            border-color: $primary transparent transparent;
+            transform: rotate(-45deg);
+            z-index: 1;
+            
+        }
+        
+        &.progress-chart__progress--second-part{
+            border-color: $primary $primary transparent transparent;
+            transform: rotate(45deg);
+            z-index: 1;
+            opacity: 0;
+        }
+        
+        &.progress-chart__progress--third-part{
+            border-color: $primary $primary transparent transparent;
+            transform: (45deg);
+            z-index: 3;
+            opacity: 0;
+        }
+        
+    }
+    
+    @for $i from 1 through 25{
+        
+        &[data-percentage="#{ $i }"]{
+
+            .progress-chart__progress.progress-chart__progress--first-part{
+                transform: rotate(-45deg + $i * $percentage);
+            }
+        }
+        
+        &[data-percentage="#{ 25 + $i }"]{
+            
+            .progress-chart__progress.progress-chart__progress--second-part{
+                transform: rotate(45deg + $i * $percentage);
+                opacity: 1;
+            }
+        }
+    }
+    
+    @for $i from 1 through 50{
+        
+        &[data-percentage="#{ 50 + $i }"]{
+            
+            .progress-chart__progress.progress-chart__progress--second-part{
+                transform: rotate(45deg);
+                opacity: 1;
+            }
+            
+            .progress-chart__progress.progress-chart__progress--third-part{
+                transform: rotate(45deg + $i * $percentage);
+                opacity: 1;
+            }
+        }
+    }
+    
+    &.progress-chart--show-value{
+        box-shadow: $shadow-secondary;
+        
+        &::before{
+            content: attr(data-value);
+            color: $secondary;
+        }
+        
+        &::after{
+            content: attr(data-slogan) ' ('attr(data-percentage)'%)';
+        }
+        
+        .progress-chart__progress{
+            
+            &.progress-chart__progress--first-part { border-top-color: $secondary; }
+            
+            &.progress-chart__progress--second-part, 
+            .progress-chart__progress--third-part { 
+                border-top-color: $secondary; border-right-color: $secondary;
+            }
+        }
+    }
+    
+    
+}
